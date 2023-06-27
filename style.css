@@ -1,0 +1,447 @@
+/* Inserir familia tipográfica */
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+
+/* Body Max Width */
+body{
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;}
+
+
+/* Header tamanho*/
+header{font-family: PlayfairDisplay; font-weight: 700; font-size: 32px; text-decoration: none;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+   }
+
+
+/* Header remove bullet points*/
+ul{list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+/* Header same line */
+ul li{display:inline;
+    margin-right: 74px;
+}
+
+/* Exclui ultimo elemento da list de ter margem */
+ul li:last-child{margin-right: 0px;}
+
+/* Deactivate Hamburger Menu */
+.hamburgermenu{display: none;}
+
+/* Style Hamburguer Menu */
+.hamblist{text-align: center;}
+h1{font-size: 48px; font-weight: 700;}
+
+
+/* Header remove decoration*/
+a{text-decoration: none;
+color:black;}
+
+/* Menu de returno do header tamanho*/
+.returnheader{font-family: PlayfairDisplay; font-weight: 700; font-size: 100%;}
+.returnheader{float: left;}
+
+/* Tamanho corpo do texto Index*/
+main{display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+min-height: 73vh;}
+
+.homebodytext{
+font-family: PlayfairDisplay;
+font-weight: 400; font-size: 75px;
+text-align: center;}
+
+.underline{text-decoration-line: underline;text-decoration-thickness: 2px;}
+
+
+/* Tamanho texto footer*/
+.footertext{font-family: PlayfairDisplay; font-weight: 400; font-size: 20px;}
+
+/* Footer Margens e alinhamento*/
+footer{
+display:flex;
+align-items: center;
+justify-content: space-between;}
+
+/* Espaço entre icons */
+.twitter{ margin-right: 37px;}
+.instagram{ margin-right: 37px;}
+.LinkedIn{margin-right: 0px;}
+
+
+
+/* Tamanho texto subtitles*/
+h3{font-family: PlayfairDisplay; font-weight: 400; font-size: 40px; margin-top: 0px;}
+
+/* Tamanho texto Nome projeto*/
+h4{font-family: PlayfairDisplay; font-weight: 400; font-size: 32px;}
+
+/* Tamanho texto corrido*/
+p{font-family: PlayfairDisplay; font-weight: 400; font-size: 24px;}
+
+
+/* Circulo tamanho blue e animação*/
+.blue-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 873px;
+    min-height: 873px;
+    max-width: 873px;
+    max-height: 873px;
+    background-color: #1400FF;
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: -1;
+    animation: moveCircle 15s infinite;
+  }
+
+  @keyframes moveCircle {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-400px, -400px);
+  }
+  25% {
+    transform: translate(-300px, -150px);
+  }
+  35% {
+    transform: translate(800px, -600px);
+  }
+  40% {
+    transform: translate(400px, -25px);
+  }
+  50% {
+    transform: translate(900px, -20px);
+  }
+  75% {
+    transform: translate(800px, -200px);
+  }
+  90% {
+    transform: translate(200px, -25px);
+  }
+}
+
+/* Text Work what have people said rows */
+.feedback{display: flex; margin-bottom: 10vh;}
+.feedback1{margin-right: 40px; border-top: 2px solid;}
+.feedback2{margin-right: 40px; border-top: 2px solid;}
+.feedback3{border-top: 2px solid;}
+.companyname{font-family: PlayfairDisplay; font-weight: 700; font-size: 24px;}
+
+/* other projects */
+.otherprojects{margin-bottom: 8vh;}
+.prj1{display: flex; align-items: center; border-top: 2px solid; border-bottom: 2px solid;}
+.prj2{display: flex; align-items: center; border-bottom: 2px solid;}
+.prj3{display: flex; align-items: center; border-bottom: 2px solid;}
+.prj4{display: flex; align-items: center; border-bottom: 2px solid;}
+.prjname{margin-left: 100%;}
+.prjarrow{margin-left: auto;}
+
+/* images work page */
+.imagecontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 5vh;
+  margin-bottom: 5vh;
+}
+
+.imgleft{width: 433px;}
+.imgcenter{width: 433px;}
+.imgright{width: 433px;}
+
+.imagecontainer .imgleft,
+.imagecontainer .imgcenter,
+.imagecontainer .imgright {
+  position: relative;
+}
+
+.imagecontainer .imgleft::before,
+.imagecontainer .imgcenter::before,
+.imagecontainer .imgright::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imagecontainer .imgleft:hover::before,
+.imagecontainer .imgcenter:hover::before,
+.imagecontainer .imgright:hover::before {
+  opacity: 1;
+}
+
+.imagecontainer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1400FF;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.imagecontainer .imgleft:hover .overlay-text,
+.imagecontainer .imgcenter:hover .overlay-text,
+.imagecontainer .imgright:hover .overlay-text {
+  opacity: 1;
+}
+
+/* text project */
+
+.projecttext{display: flex;
+  position: relative;
+}
+
+.projecttext p{margin-right: 5%; margin-bottom: 5%;}
+
+.projecttext p:last-child{margin-right: 0;}
+
+/* Imagem dentro das páginas projeto */
+.slidercontainer {
+	margin-bottom: 5vh;
+}
+.slidercontainer2 {
+	margin-bottom: 5vh;
+}
+
+.slidercontainer3 {
+	margin-bottom: 5vh;
+}
+
+.slidercontainer4 {
+	margin-bottom: 5vh;
+}
+
+.slidercontainer5 {
+	margin-bottom: 5vh;
+}
+
+.slidercontainer6 {
+	margin-bottom: 5vh;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 8;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.slider::-webkit-scrollbar {
+	display: none;
+}/* Hide scrollbar for Chrome, Safari and Opera */
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+/* .slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+} */
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-100% * 9)); /* Adjust the value based on the number of slides */
+  }
+}
+
+@keyframes slide-2 {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-100% * 2)); /* Adjust the value based on the number of slides */
+  }
+}
+
+@keyframes slide-3 {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-100% * 27)); /* Adjust the value based on the number of slides */
+  }
+}
+
+@keyframes slide-4 {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-100% * 3)); /* Adjust the value based on the number of slides */
+  }
+}
+
+@keyframes slide-5 {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-100% * 14)); /* Adjust the value based on the number of slides */
+  }
+}
+
+@keyframes slide-6 {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-100% * 7)); /* Adjust the value based on the number of slides */
+  }
+}
+
+.slidercontainer .slider img {
+  animation: slide 50s linear infinite; /* Adjust the duration as needed */
+}
+
+.slidercontainer2 .slider img {
+  animation: slide-2 15s linear infinite; /* Adjust the duration as needed */
+}
+
+.slidercontainer3 .slider img {
+  animation: slide-3 140s linear infinite; /* Adjust the duration as needed */
+}
+
+.slidercontainer4 .slider img {
+  animation: slide-4 20s linear infinite; /* Adjust the duration as needed */
+}
+
+.slidercontainer5 .slider img {
+  animation: slide-5 70s linear infinite; /* Adjust the duration as needed */
+}
+
+.slidercontainer6 .slider img {
+  animation: slide-6 40s linear infinite; /* Adjust the duration as needed */
+}
+
+/* logos menu */
+.logosredes3{display: flex; justify-content: center;}
+
+/* About Milestones */
+
+.milestones{display:flex;}
+.milestones1{margin-right: 5%; border-top: 2px solid;}
+.milestones2{margin-right: 5%; border-top: 2px solid;}
+.milestones3{margin-right: 0px; border-top: 2px solid;}
+.milestones4{margin-right: 5%; border-top: 2px solid;}
+.milestones5{margin-right: 5%; border-top: 2px solid;}
+.milestones6{margin-right: 0px; border-top: 2px solid; margin-bottom: 5vh;}
+
+/* About me image and text */
+
+.about{display:flex;}
+.abouttext{margin-left: 40px;}
+.aboutimg{margin-bottom: 60px;}
+
+/* Media Queries */
+@media screen and (max-width:900px){
+
+  ul li{display: none;}
+  .hamburgermenu{display: flex;}
+  .headermenu{display: flex; justify-content: space-between; align-items: center;}
+  footer{display:block;font-size: 36px;}
+  .footertext{text-align: center;}
+  .logosredes{display: none;}
+  .feedback{display: flex; flex-direction: column;}
+  .feedback1{margin-right: 0px;}
+  .feedback2{margin-right: 0px;}
+  .feedback3{margin-right: 0px;}
+  .milestones{display: flex; flex-direction: column; margin-right: 0px;}
+  .milestones1{margin-right: 0px;}
+  .milestones2{margin-right: 0px;}
+  .milestones3{margin-right: 0px;}
+  .milestones4{margin-right: 0px;}
+  .milestones5{margin-right: 0px;}
+  .milestones6{margin-right: 0px;}
+  .projecttext{display:flex; flex-direction: column; margin-bottom: 3vh;}
+  .imgleft{width: 750px;}
+  .imgright{width: 750px;}
+  .imgcenter{width: 750px;}
+ 
+
+  }
+
+  @media screen and (max-width:650px){
+    .slider{aspect-ratio: 4 / 3;}
+  }
+  
+  @media screen and (max-width:1400px) {
+    .about{display: flex; flex-direction: column;}
+    .abouttext{margin-left: 0px; margin-bottom: 5vh;}
+    .aboutimg img{display: block;  max-width: 100%;
+      height: auto;}
+  }
+
+
+  @media screen and (max-width:400px) {
+    .homebodytext{font-size: 50px;}
+  }
+
+  @media screen and (min-width:1700px){
+    .imgleft{width: 540px;}
+    .imgright{width: 540px;}
+    .imgcenter{width: 540px;}
+  }
